@@ -73,7 +73,7 @@ jobs:
     # kustomize 로 image tag 값 변경
     - name: Update Kubernetes resources
       run: |
-        pwd
+        pwd 
         cd cicd/overlays/${{ env.ENV_NAME }}/ 
         kustomize edit set image ${{ env.APP }}:main-${{ github.sha }}
 
