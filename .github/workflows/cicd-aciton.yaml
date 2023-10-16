@@ -83,5 +83,6 @@ jobs:
         cd cicd
         git config --global user.email "goldencorn7@naver.com"
         git config --global user.name "ghdeo"
+        git config --global user.password "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"
         git commit -am "Update image"
         git push -u origin main
