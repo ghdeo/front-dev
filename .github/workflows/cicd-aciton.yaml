@@ -74,14 +74,14 @@ jobs:
     - name: Update Kubernetes resources
       run: |
         pwd
-        cd cicd-gitops-eks/overlays/${{ env.ENV_NAME }}/ 
+        cd cicd/overlays/${{ env.ENV_NAME }}/ 
         kustomize edit set image ${{ env.APP }}:main-${{ github.sha }}
 
     # 수정된 kustomization.yaml 파일 commit push
     - name: Commit minifest files
       run: |
-        cd cicd-gitops-eks
+        cd cicd
         git config --global user.email "goldencorn7@naver.com"
-        git config --global user.name "kimdabeans"
+        git config --global user.name "ghdeo"
         git commit -am "Update image"
         git push -u origin main
