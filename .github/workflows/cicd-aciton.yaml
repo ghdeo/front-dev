@@ -57,7 +57,7 @@ jobs:
         cache-to: type=gha,mode=max
         build-args: |
           ENV=main
-    
+
     - name: Checkout for Kustomize repository
       uses: actions/checkout@v2
       with:
